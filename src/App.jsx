@@ -6,9 +6,9 @@ import { RiMoneyPoundCircleFill } from "react-icons/ri";
 import { FaStar } from "react-icons/fa6";
 
 const options = [
-  { text: "alphabetically", icon: <MdSortByAlpha /> },
-  { text: "price", icon: <RiMoneyPoundCircleFill /> },
-  { text: "star rating", icon: <FaStar /> },
+  { text: "alphabetically", icon: (color) => <MdSortByAlpha size={"1.3rem"} color={color} /> },
+  { text: "price", icon: (color) => <RiMoneyPoundCircleFill size={"1.3rem"} color={color} /> },
+  { text: "star rating", icon: (color) => <FaStar size={"1.3rem"} color={color} /> },
 ];
 
 function App() {

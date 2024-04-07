@@ -12,7 +12,7 @@ const SortElement = ({ option, selected, onClick }) => {
         <Text bold>{` ${option?.text}`}</Text>
       </div>
 
-      <div className={`${styles?.icon} ${!active && styles.inactiveIcon}`}>{option?.icon}</div>
+      {option?.icon(active ? "white" : "#d4d4d4")}
     </div>
   );
 };
