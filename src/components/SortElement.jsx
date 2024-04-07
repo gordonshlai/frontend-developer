@@ -1,4 +1,5 @@
 import styles from "./SortElement.module.scss";
+import Text from "./Text";
 
 const SortElement = ({ option, selected, onClick }) => {
   const active = selected === option;
@@ -6,9 +7,9 @@ const SortElement = ({ option, selected, onClick }) => {
   return (
     <div className={`${styles.container} ${active ? styles.active : styles.inactive}`} onClick={onClick}>
       <div>
-        <p className={styles.text}>sort</p>
-        <p className={styles.text}>{option?.text !== "alphabetically" && " by"}</p>
-        <p className={`${styles.text} ${styles.bold}`}>{` ${option?.text}`}</p>
+        <Text>sort</Text>
+        <Text>{option?.text !== "alphabetically" && " by"}</Text>
+        <Text bold>{` ${option?.text}`}</Text>
       </div>
 
       <div className={`${styles?.icon} ${!active && styles.inactiveIcon}`}>{option?.icon}</div>
