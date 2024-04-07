@@ -6,7 +6,10 @@
 }
 
 .navBar {
-  background: red;
+  display: grid;
+  grid-template-columns: auto;
+  row-gap: 1px;
+  background: #17317f;
 }
 
 .main {
