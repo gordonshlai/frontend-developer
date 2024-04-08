@@ -3,6 +3,7 @@ import { FaChevronDown, FaChevronRight } from "react-icons/fa";
 import { FaStar } from "react-icons/fa6";
 import styles from "./Deal.module.scss";
 import Text from "./Text";
+import Heading from "./Heading";
 
 const Deal = ({ deal }) => {
   const { img, title, address, stars, adults, children, infants, date, duration, departingFrom, price, overview } =
@@ -15,7 +16,7 @@ const Deal = ({ deal }) => {
       <section className={styles.card}>
         <img className={styles.img} src={img} />
         <div className={styles.description}>
-          <h1 className={styles.title}>{title}</h1>
+          <Heading className={styles.title}>{title}</Heading>
 
           <Text className={styles.address}>{address}</Text>
 
@@ -76,7 +77,7 @@ const Deal = ({ deal }) => {
 
       {isOverviewVisible && (
         <article className={styles.accordionContent}>
-          <h1 className={styles.title}>Overview</h1>
+          <Heading className={styles.overview}>Overview</Heading>
           <p className={styles.accordionParagraph}>{overview}</p>
         </article>
       )}
