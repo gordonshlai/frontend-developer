@@ -12,22 +12,22 @@ const Deal = ({ deal }) => {
 
   return (
     <div className={styles.container}>
-      <section className={styles.description}>
+      <section className={styles.card}>
         <img className={styles.img} src={img} />
-        <div>
-          <header>{title}</header>
+        <div className={styles.description}>
+          <h1 className={styles.title}>{title}</h1>
 
-          <Text>{address}</Text>
+          <Text className={styles.address}>{address}</Text>
 
-          <div>
+          <div className={styles.starsContainer}>
             {Array(stars)
               .fill(true)
               .map((_, i) => (
-                <FaStar color={"#fedc07"} key={i} />
+                <FaStar className={styles.star} key={i} />
               ))}
           </div>
 
-          <div>
+          <div className={styles.content}>
             {!!adults && (
               <>
                 <Text bold>{adults}</Text>
@@ -50,34 +50,34 @@ const Deal = ({ deal }) => {
             )}
           </div>
 
-          <div>
+          <div className={styles.content}>
             <Text bold>{date}</Text>
             <Text>{" for "}</Text>
             <Text bold>{duration}</Text>
           </div>
 
-          <div>
+          <div className={styles.content}>
             <Text>{"departing from "}</Text>
             <Text bold>{departingFrom}</Text>
           </div>
 
           <div className={styles.button}>
-            <p>Book now</p>
-            <p>{`£ ${price}`}</p>
+            <p className={styles.bookNow}>Book now</p>
+            <p className={styles.price}>{`£ ${price}`}</p>
           </div>
         </div>
 
         <div className={styles.accordion} onClick={() => setIsOverviewVisible(!isOverviewVisible)}>
           <Text bold>{`Read ${isOverviewVisible ? "less" : "more"}`}</Text>
-          <Text>&nbsp;about this hotel</Text>
+          <Text className={styles.accordionText}>&nbsp;about this hotel</Text>
           {isOverviewVisible ? <FaChevronDown size={"1.3rem"} /> : <FaChevronRight size={"1.3rem"} />}
         </div>
       </section>
 
       {isOverviewVisible && (
-        <article>
-          <header>Overview</header>
-          <Text>{overview}</Text>
+        <article className={styles.accordionContent}>
+          <h1 className={styles.title}>Overview</h1>
+          <p className={styles.accordionParagraph}>{overview}</p>
         </article>
       )}
     </div>

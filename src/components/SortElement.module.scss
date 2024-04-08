@@ -1,6 +1,8 @@
+@import "../styles/colors.scss";
+
 .container {
   display: flex;
-  background: white;
+  background: $white;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 1.5rem;
@@ -11,11 +13,11 @@
 }
 
 .active {
-  color: white;
-  background: #17317f;
+  color: $white;
+  background: $primary;
 }
 
 .inactive {
-  color: #17317f;
-  background: white;
+  color: $primary;
+  background: $white;
 }
