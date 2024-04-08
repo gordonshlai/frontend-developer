@@ -1,0 +1,30 @@
+@import "../../../styles/colors.scss";
+
+.button {
+  background: $secondary;
+  color: $primary;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0;
+  margin: 1rem 0;
+  border: none;
+  width: 100%;
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0.3rem 0.3rem 0.3rem $grey;
+  }
+}
+
+.bookNow {
+  margin: 0;
+}
+
+.price {
+  font-size: 2rem;
+  margin: 0;
+  letter-spacing: 0.05rem;
+}

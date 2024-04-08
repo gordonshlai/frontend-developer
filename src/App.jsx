@@ -6,7 +6,7 @@ import styles from "./App.module.scss";
 import hotel1 from "./assets/hotel-image-1.png";
 import hotel2 from "./assets/hotel-image-2.png";
 import hotel3 from "./assets/hotel-image-3.png";
-import Deal from "./components/Deal";
+import Deal from "./components/Deal/Deal";
 import SortElement from "./components/SortElement";
 
 const options = [
@@ -22,7 +22,7 @@ const deals = [
     address: "Costa Adeje, Tenerife",
     stars: 5,
     adults: 2,
-    children: 2,
+    child: 2,
     infants: 1,
     date: "3rd July 2019",
     duration: "7 days",
@@ -37,7 +37,7 @@ const deals = [
     address: "Costa Adeje, Tenerife",
     stars: 4,
     adults: 2,
-    children: 1,
+    child: 1,
     infants: 0,
     date: "27th May 2019",
     duration: "7 days",
@@ -52,7 +52,7 @@ const deals = [
     address: "Costa Adeje, Tenerife",
     stars: 3,
     adults: 2,
-    children: 2,
+    child: 2,
     infants: 0,
     date: "3rd July 2019",
     duration: "7 days",
