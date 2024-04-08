@@ -4,8 +4,13 @@
 }
 
 .description {
-  display: flex;
+  display: grid;
   position: relative;
+  grid-template-columns: 3fr 2fr;
+}
+
+.img {
+  width: 100%;
 }
 
 .button {

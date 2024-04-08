@@ -13,7 +13,7 @@ const Deal = ({ deal }) => {
   return (
     <div className={styles.container}>
       <section className={styles.description}>
-        <img src={img} />
+        <img className={styles.img} src={img} />
         <div>
           <header>{title}</header>
 

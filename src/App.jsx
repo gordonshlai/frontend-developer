@@ -68,14 +68,17 @@ function App() {
 
   return (
     <div className={styles.container}>
-      <nav className={styles.navBar}>
+      <nav>
         {options?.map((option, index) => (
-          <SortElement
-            option={option}
-            key={option?.text + index}
-            selected={selected}
-            onClick={() => setSelected(option)}
-          />
+          <>
+            {index !== 0 && <div className={styles.divider} />}
+            <SortElement
+              option={option}
+              key={option?.text + index}
+              selected={selected}
+              onClick={() => setSelected(option)}
+            />
+          </>
         ))}
       </nav>
       <main>
