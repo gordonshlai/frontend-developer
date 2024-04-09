@@ -1,14 +1,14 @@
 import Text from "../../Text";
 import styles from "./Content.module.scss";
 
-const Content = ({ data: { adults, child, infant, date, duration, departingFrom } }) => {
+const Content = ({ data: { adult, child, infant, date, duration, departingFrom } }) => {
   return (
     <>
       <div className={styles.content}>
-        {!!adults && (
+        {!!adult && (
           <>
-            <Text bold>{adults}</Text>
-            <Text>{` adult${adults > 1 ? "s" : ""}`}</Text>
+            <Text bold>{adult}</Text>
+            <Text>{` adult${adult > 1 ? "s" : ""}`}</Text>
           </>
         )}
         {!!child && (
