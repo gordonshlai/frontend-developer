@@ -14,7 +14,7 @@ const Deal = ({
   const [isOverviewVisible, setIsOverviewVisible] = useState(false);
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} data-testid="deal-component">
       <section className={styles.card}>
         <img className={styles.img} src={img} />
         <div className={styles.description}>
