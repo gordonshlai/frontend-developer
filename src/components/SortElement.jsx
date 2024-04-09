@@ -2,17 +2,21 @@ import styles from "./SortElement.module.scss";
 import Text from "./Text";
 
 const SortElement = ({ option, selected, onClick }) => {
+  const { text, Icon } = option;
   const active = selected === option;
 
+  const containerStyle = `${styles.container} ${active ? styles.active : styles.inactive}`;
+  const iconStyle = `${styles.icon} ${active ? styles.iconActive : styles.iconInactive}`;
+
   return (
-    <div className={`${styles.container} ${active ? styles.active : styles.inactive}`} onClick={onClick}>
+    <div className={containerStyle} onClick={onClick}>
       <div>
         <Text>sort</Text>
-        <Text>{option?.text !== "alphabetically" && " by"}</Text>
-        <Text bold>{` ${option?.text}`}</Text>
+        <Text>{text !== "alphabetically" && " by"}</Text>
+        <Text bold>{` ${text}`}</Text>
       </div>
 
-      {option?.icon(active ? "white" : "#d4d4d4")}
+      <Icon className={iconStyle} />
     </div>
   );
 };

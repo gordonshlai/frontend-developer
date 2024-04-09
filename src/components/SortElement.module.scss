@@ -16,3 +16,15 @@
   color: $primary;
   background: $white;
 }
+
+.icon {
+  font-size: 1.3rem;
+}
+
+.iconActive {
+  color: $white;
+}
+
+.iconInactive {
+  color: $lightGrey;
+}

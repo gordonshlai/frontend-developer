@@ -10,17 +10,17 @@ import deals from "./data/deals";
 const options = [
   {
     text: "alphabetically",
-    icon: (color) => <MdSortByAlpha size={"1.3rem"} color={color} />,
+    Icon: MdSortByAlpha,
     sortingFunction: (a, b) => a.title.localeCompare(b.title),
   },
   {
     text: "price",
-    icon: (color) => <RiMoneyPoundCircleFill size={"1.3rem"} color={color} />,
+    Icon: RiMoneyPoundCircleFill,
     sortingFunction: (a, b) => parseFloat(a.price.replace(",", "")) - parseFloat(b.price.replace(",", "")),
   },
   {
     text: "star rating",
-    icon: (color) => <FaStar size={"1.3rem"} color={color} />,
+    Icon: FaStar,
     sortingFunction: (a, b) => b.stars - a.stars,
   },
 ];
