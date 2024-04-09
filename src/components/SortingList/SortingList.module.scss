@@ -1,0 +1,11 @@
+@import "../../styles/colors.scss";
+
+.ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.divider {
+  border-top: $primary solid 1px;
+}

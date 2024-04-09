@@ -1,5 +1,5 @@
 import styles from "./SortElement.module.scss";
-import Text from "./Text";
+import Text from "../../Text";
 
 const SortElement = ({ option, selected, onClick }) => {
   const { text, Icon } = option;
