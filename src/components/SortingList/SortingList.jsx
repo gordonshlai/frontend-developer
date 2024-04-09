@@ -27,7 +27,7 @@ const SortingList = ({ sortedDeals, setSortedDeals }) => {
   const [selected, setSelected] = useState(options[1]);
 
   return (
-    <section>
+    <section data-testid="sorting-list">
       <ul className={styles.ul}>
         {options?.map((option, index) => (
           <li key={option?.text + index}>
