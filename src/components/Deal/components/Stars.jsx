@@ -7,7 +7,7 @@ const Stars = ({ stars }) => {
       {Array(stars)
         .fill(true)
         .map((_, i) => (
-          <FaStar className={styles.star} key={i} />
+          <FaStar className={styles.star} key={i} data-testid={`star-${i}`} />
         ))}
     </div>
   );
