@@ -1,7 +1,7 @@
 import Text from "../../Text";
 import styles from "./Content.module.scss";
 
-const Content = ({ adults, child, infants, date, duration, departingFrom }) => {
+const Content = ({ data: { adults, child, infant, date, duration, departingFrom } }) => {
   return (
     <>
       <div className={styles.content}>
@@ -18,11 +18,11 @@ const Content = ({ adults, child, infants, date, duration, departingFrom }) => {
             <Text>{` child${child > 1 ? "ren" : ""}`}</Text>
           </>
         )}
-        {!!infants && (
+        {!!infant && (
           <>
             <Text>{` & `}</Text>
-            <Text bold>{infants}</Text>
-            <Text>{` infant${infants > 1 ? "s" : ""}`}</Text>
+            <Text bold>{infant}</Text>
+            <Text>{` infant${infant > 1 ? "s" : ""}`}</Text>
           </>
         )}
       </div>

@@ -8,9 +8,9 @@ import Button from "./components/Button";
 import AccordionButton from "./components/AccordionButton";
 import AccordionContent from "./components/AccordionContent";
 
-const Deal = ({ deal }) => {
-  const { img, title, address, stars, adults, child, infants, date, duration, departingFrom, price, overview } = deal;
-
+const Deal = ({
+  deal: { img, title, address, stars, adults, child, infant, date, duration, departingFrom, price, overview },
+}) => {
   const [isOverviewVisible, setIsOverviewVisible] = useState(false);
 
   return (
@@ -21,14 +21,7 @@ const Deal = ({ deal }) => {
           <Heading className={styles.title}>{title}</Heading>
           <Text className={styles.address}>{address}</Text>
           <Stars stars={stars} />
-          <Content
-            adults={adults}
-            child={child}
-            infants={infants}
-            date={date}
-            duration={duration}
-            departingFrom={departingFrom}
-          />
+          <Content data={{ adults, child, infant, date, duration, departingFrom }} />
           <Button price={price} />
         </div>
 
