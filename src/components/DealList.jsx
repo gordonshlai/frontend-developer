@@ -2,7 +2,7 @@ import Deal from "./Deal/Deal";
 
 const DealList = ({ sortedDeals }) => {
   return (
-    <main>
+    <main data-testid="deal-list">
       {sortedDeals?.map((deal, index) => (
         <Deal deal={deal} key={deal?.title + index} />
       ))}

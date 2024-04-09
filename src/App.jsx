@@ -10,7 +10,7 @@ function App() {
   const [sortedDeals, setSortedDeals] = useState(deals?.sort(sortByPrice) ?? []);
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} data-testid="app-container">
       <SortingList sortedDeals={sortedDeals} setSortedDeals={setSortedDeals} />
       <DealList sortedDeals={sortedDeals} />
     </div>
