@@ -9,7 +9,7 @@ const SortElement = ({ option, selected, onClick }) => {
   const iconStyle = `${styles.icon} ${active ? styles.iconActive : styles.iconInactive}`;
 
   return (
-    <div className={containerStyle} onClick={onClick}>
+    <div className={containerStyle} onClick={onClick} data-testid={"sort-element"}>
       <div>
         <Text>sort</Text>
         <Text>{text !== "alphabetically" && " by"}</Text>
